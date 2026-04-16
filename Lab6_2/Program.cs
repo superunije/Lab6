@@ -107,8 +107,10 @@ class Program
         var t1 = new Time(h1, m1);
         var t2 = new Time(h2, m2);
 
-        var result = t1 - t2;
+        var resultSubstract = t1 - t2;
+        var resultAdd = t1 + t2;
 
-        Console.WriteLine("Результат: " + result);
+        Console.WriteLine("Результат вычитания: " + resultSubstract);
+        Console.WriteLine("Результат сложения: " + resultAdd);
     }
 }
