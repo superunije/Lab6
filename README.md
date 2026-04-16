@@ -37,5 +37,5 @@
 
 ### Тестирование
 
-![2](Screenshots/2nd-task.tga)
+![2](Screenshots/2nd-task.webp)
 
