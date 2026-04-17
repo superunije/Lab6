@@ -90,14 +90,14 @@ class Program
         bool b = InputBool("Введите B: ");
 
         var obj = new Logic(a, b);
-        var objcopy = new Logic(obj);
+        var objCopy = new Logic(obj);
 
         Console.WriteLine("\nБазовый класс:");
         Console.WriteLine(obj.ToString());
         Console.WriteLine("Эквиваленция: " + obj.Equivalence());
 
         Console.WriteLine("\nКопия:");
-        Console.WriteLine(objcopy.ToString());
+        Console.WriteLine(objCopy.ToString());
 
         Console.Write("\nВведите имя: ");
         var name = Console.ReadLine();
