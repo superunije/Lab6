@@ -89,12 +89,12 @@ class Program
         bool a = InputBool("Введите A: ");
         bool b = InputBool("Введите B: ");
 
-        var obj1 = new Logic(a, b);
-        var obj2 = new Logic(obj1);
+        var obj = new Logic(a, b);
+        var objcopy = new Logic(obj);
 
         Console.WriteLine("\nБазовый класс:");
-        Console.WriteLine(obj1.ToString());
-        Console.WriteLine("Эквиваленция: " + obj1.Equivalence());
+        Console.WriteLine(obj.ToString());
+        Console.WriteLine("Эквиваленция: " + obj.Equivalence());
 
         Console.WriteLine("\nКопия:");
         Console.WriteLine(obj2.ToString());
