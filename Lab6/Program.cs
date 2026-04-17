@@ -2,70 +2,68 @@
 
 class Logic
 {
-    protected bool A;
-    protected bool B;
+    protected bool fst_bool;
+    protected bool snd_bool;
 
     public Logic(bool a, bool b)
     {
-        A = a;
-        B = b;
+        fst_bool = a;
+        snd_bool = b;
     }
 
     public Logic(Logic copy)
     {
-        A = copy.A;
-        B = copy.B;
+        fst_bool = copy.fst_bool;
+        snd_bool = copy.snd_bool;
     }
 
     public bool Equivalence()
     {
-        return A == B;
+        return fst_bool == snd_bool;
     }
 
     public override string ToString()
     {
-        return "A = " + A + ", B = " + B;
+        return "A = " + fst_bool + ", B = " + snd_bool;
     }
 }
 
 class LogicExtended : Logic
 {
-    private string? m_name;
+    private string? _name;
 
     public LogicExtended(bool a, bool b, string? name) : base(a, b)
     {
-        m_name = name;
+        _name = name;
     }
 
     public LogicExtended(LogicExtended other) : base(other)
     {
-        m_name = other.m_name;
+        _name = other._name;
     }
 
     public void Invert()
     {
-        A = !A;
-        B = !B;
+        fst_bool = !fst_bool;
+        snd_bool = !snd_bool;
     }
 
     public bool IsBothTrue()
     {
-        return A && B;
+        return fst_bool && snd_bool;
     }
 
     public void SetValues(bool a, bool b)
     {
-        A = a;
-        B = b;
+        fst_bool = a;
+        snd_bool = b;
     }
 
     public override string ToString()
     {
-        return base.ToString() + ", Name = " + m_name;
+        return base.ToString() + ", Name = " + _name;
     }
 }
-
-
 
 class Program
 {
@@ -85,7 +83,7 @@ class Program
         }
     }
 
-    static void Main(string[] args)
+    static void Main(string[] _)
     {
         Console.WriteLine("Ввод логических значений(true/false)");
         bool a = InputBool("Введите A: ");
