@@ -97,7 +97,7 @@ class Program
         Console.WriteLine("Эквиваленция: " + obj.Equivalence());
 
         Console.WriteLine("\nКопия:");
-        Console.WriteLine(obj2.ToString());
+        Console.WriteLine(objcopy.ToString());
 
         Console.Write("\nВведите имя: ");
         var name = Console.ReadLine();
