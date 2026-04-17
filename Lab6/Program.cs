@@ -1,30 +1,31 @@
 ﻿using System;
-
+// добавить смысл
+// раскидать по файлам классы
 class Logic
 {
-    protected bool fst_bool;
-    protected bool snd_bool;
+    protected bool fstBool;
+    protected bool sndBool;
 
     public Logic(bool a, bool b)
     {
-        fst_bool = a;
-        snd_bool = b;
+        fstBool = a;
+        sndBool = b;
     }
 
     public Logic(Logic copy)
     {
-        fst_bool = copy.fst_bool;
-        snd_bool = copy.snd_bool;
+        fstBool = copy.fstBool;
+        sndBool = copy.sndBool;
     }
 
     public bool Equivalence()
     {
-        return fst_bool == snd_bool;
+        return fstBool == sndBool;
     }
 
     public override string ToString()
     {
-        return "A = " + fst_bool + ", B = " + snd_bool;
+        return "A = " + fstBool + ", B = " + sndBool;
     }
 }
 
@@ -44,19 +45,19 @@ class LogicExtended : Logic
 
     public void Invert()
     {
-        fst_bool = !fst_bool;
-        snd_bool = !snd_bool;
+        fstBool = !fstBool;
+        sndBool = !sndBool;
     }
 
     public bool IsBothTrue()
     {
-        return fst_bool && snd_bool;
+        return fstBool && sndBool;
     }
 
     public void SetValues(bool a, bool b)
     {
-        fst_bool = a;
-        snd_bool = b;
+        fstBool = a;
+        sndBool = b;
     }
 
     public override string ToString()

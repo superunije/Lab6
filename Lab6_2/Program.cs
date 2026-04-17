@@ -1,7 +1,8 @@
 ﻿using System;
+// code style m_hours m_minutes
 public class Time
 {
-    public const byte MAX_HOURS = 23;
+    public const byte MAX_HOURS = 23; // убрать ограничения, >24 часов -> перевод в некст день
     public const byte MAX_MINUTES = 59;
 
     private readonly byte m_hours;
@@ -23,15 +24,15 @@ public class Time
 
     public Time(Time copy) : this(copy.Hours, copy.Minutes) { }
 
-    public byte Hours
+    public byte Hours // code style
     {
         get { return m_hours; }
     }
-    public byte Minutes
+    public byte Minutes // code style
     {
         get { return m_minutes; }
     }
-    public uint TotalMinutes
+    public uint TotalMinutes // code style
     {
         get { return (uint)m_hours * 60 + m_minutes; }
     }
@@ -41,7 +42,7 @@ public class Time
         return $"{Hours:D2}:{Minutes:D2}";
     }
 
-    public static Time operator -(Time left, Time right)
+    public static Time operator -(Time left, Time right) // code style
     {
         var hours = left.Hours - right.Hours;
         var minutes = left.Minutes - right.Minutes;
@@ -82,7 +83,7 @@ public class Time
 
 class Program
 {
-    static byte InputByte(string msg, int max)
+    static byte InputByte(string msg, int max) // code style
     {
         while (true)
         {
