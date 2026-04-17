@@ -98,6 +98,7 @@ class Program
 
     static void Main()
     {
+        Console.WriteLine("Введите время");
         byte h1 = InputByte("Часы 1: ", 24);
         byte m1 = InputByte("Минуты 1: ", 60);
 

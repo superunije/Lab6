@@ -11,10 +11,10 @@ class Logic
         B = b;
     }
 
-    public Logic(Logic other)
+    public Logic(Logic copy)
     {
-        A = other.A;
-        B = other.B;
+        A = copy.A;
+        B = copy.B;
     }
 
     public bool Equivalence()
@@ -32,14 +32,12 @@ class LogicExtended : Logic
 {
     private string? m_name;
 
-    public LogicExtended(bool a, bool b, string? name)
-        : base(a, b)
+    public LogicExtended(bool a, bool b, string? name) : base(a, b)
     {
         m_name = name;
     }
 
-    public LogicExtended(LogicExtended other)
-        : base(other)
+    public LogicExtended(LogicExtended other) : base(other)
     {
         m_name = other.m_name;
     }
@@ -75,7 +73,7 @@ class Program
     {
         while (true)
         {
-            Console.Write(message + " (true/false): ");
+            Console.Write(message);
             var input = Console.ReadLine();
 
             if (input == "true")
@@ -89,8 +87,9 @@ class Program
 
     static void Main(string[] args)
     {
-        bool a = InputBool("Введите A");
-        bool b = InputBool("Введите B");
+        Console.WriteLine("Ввод логических значений(true/false)");
+        bool a = InputBool("Введите A: ");
+        bool b = InputBool("Введите B: ");
 
         var obj1 = new Logic(a, b);
         var obj2 = new Logic(obj1);
