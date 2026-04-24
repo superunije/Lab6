@@ -30,7 +30,17 @@ namespace Lab6
 
         public override string ToString()
         {
-            return "A = " + fstBool + ", B = " + sndBool;
+            string msg1 = "не в наличии";
+            string msg2 = "не в наличии";
+            if (fstBool)
+            {
+                msg1 = "в наличии";
+            }
+            if (sndBool)
+            {
+                msg2 = "в наличии";
+            }
+            return "Товар A " + msg1 + ", товар B " + msg2;
         }
     }
 }

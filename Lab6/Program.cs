@@ -23,24 +23,26 @@ namespace Lab6
 
         static void Main(string[] _)
         {
-            Console.WriteLine("Ввод логических значений(true/false)");
-            bool a = InputBool("Введите A: ");
-            bool b = InputBool("Введите B: ");
+            Console.WriteLine("Введите наличие двух товаров(true/false)");
+            bool a = InputBool("Введите товар A: ");
+            bool b = InputBool("Введите товар B: ");
 
             var obj = new Logic(a, b);
             var objCopy = new Logic(obj);
 
             Console.WriteLine("\nБазовый класс:");
             Console.WriteLine(obj.ToString());
-            Console.WriteLine("Эквиваленция: " + obj.Equivalence());
+            Console.WriteLine("Оба ли в наличии: " + obj.Equivalence());
 
             Console.WriteLine("\nКопия:");
             Console.WriteLine(objCopy.ToString());
 
-            Console.Write("\nВведите имя: ");
-            var name = Console.ReadLine();
+            Console.Write("\nВведите название первого товара: ");
+            var name1 = Console.ReadLine();
+            Console.Write("Введите название второго товара: ");
+            var name2 = Console.ReadLine();
 
-            var ext = new LogicExtended(a, b, name);
+            var ext = new LogicExtended(a, b, name1, name2);
             var extCopy = new LogicExtended(ext);
 
             Console.WriteLine("\nДочерний класс:");
