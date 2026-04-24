@@ -42,7 +42,7 @@
 
 ### Тестирование
 
-![1](Screenshots/1st-task.tiff)
+![1](Screenshots/1st-task.png)
 
 
 
@@ -85,5 +85,5 @@
 
 ### Тестирование
 
-![2](Screenshots/2nd-task.webp)
+![2](Screenshots/2nd-task.png)
 
