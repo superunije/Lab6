@@ -8,9 +8,6 @@ namespace Lab6_2
 {
     internal class Time
     {
-        public const byte MAX_HOURS = 24; 
-        public const byte MAX_MINUTES = 60;
-
         private readonly byte hours;
         private readonly byte minutes;
 
@@ -18,12 +15,12 @@ namespace Lab6_2
         {
             if (h >= 24)
             {
-                h = (byte) (h % MAX_HOURS);
+                h = (byte)(h % 24);
             }
             if (m >= 60)
             {
-                h += (byte)(m / MAX_MINUTES);
-                m = (byte) (m % MAX_MINUTES);
+                h += (byte)(m / 60);
+                m = (byte)(m % 60);
             }
             hours = h;
             minutes = m;
@@ -41,15 +38,24 @@ namespace Lab6_2
 
         public byte Hours
         {
-            get { return hours; }
+            get 
+            { 
+                return hours; 
+            }
         }
         public byte Minutes
         {
-            get { return minutes; }
+            get 
+            { 
+                return minutes; 
+            }
         }
         public uint TotalMinutes
         {
-            get { return (uint)hours * 60 + minutes; }
+            get 
+            { 
+                return (uint)hours * 60 + minutes; 
+            }
         }
 
         public override string ToString()
@@ -57,10 +63,10 @@ namespace Lab6_2
             return $"{Hours:D2}:{Minutes:D2}";
         }
 
-        public static Time operator -(Time left, Time right) // code style
+        public static Time operator -(Time left, Time right)
         {
-            var hours = left.Hours - right.Hours;
-            var minutes = left.Minutes - right.Minutes;
+            int hours = left.Hours - right.Hours;
+            int minutes = left.Minutes - right.Minutes;
             if (minutes < 0)
             {
                 minutes += 60;

@@ -13,9 +13,13 @@ namespace Lab6
                 var input = Console.ReadLine();
 
                 if (input == "true")
+                {
                     return true;
+                }
                 if (input == "false")
+                {
                     return false;
+                }
 
                 Console.WriteLine("Ошибка ввода! Введите true или false.");
             }

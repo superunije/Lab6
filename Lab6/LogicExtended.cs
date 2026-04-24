@@ -17,38 +17,38 @@ namespace Lab6
             _name2 = name2;
         }
 
-        public LogicExtended(LogicExtended other) : base(other)
+        public LogicExtended(LogicExtended copy) : base(copy)
         {
-            _name1 = other._name1;
-            _name2 = other._name2;
+            _name1 = copy._name1;
+            _name2 = copy._name2;
         }
 
         public void Invert()
         {
-            fstBool = !fstBool;
-            sndBool = !sndBool;
+            _fstBool = !_fstBool;
+            _sndBool = !_sndBool;
         }
 
         public bool IsBothTrue()
         {
-            return fstBool && sndBool;
+            return _fstBool && _sndBool;
         }
 
         public void SetValues(bool a, bool b)
         {
-            fstBool = a;
-            sndBool = b;
+            _fstBool = a;
+            _sndBool = b;
         }
 
         public override string ToString()
         {
             string msg1 = "не в наличии";
             string msg2 = "не в наличии";
-            if (fstBool)
+            if (_fstBool)
             {
                 msg1 = "в наличии";
             }
-            if (sndBool)
+            if (_sndBool)
             {
                 msg2 = "в наличии";
             }
